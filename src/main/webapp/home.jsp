@@ -12,9 +12,9 @@
         body{
             background: #212529;
         }
-        /* Navbar Styling */
+
         .navbar {
-            background: #212529; /* Dark Theme */
+            background: #212529;
             padding: 15px 30px;
         }
         .navbar-brand {
@@ -44,7 +44,7 @@
             border-color: #17a2b8;
         }
 
-        /* Hero Section */
+
         .hero {
 
             color: white;
@@ -60,13 +60,13 @@
             margin-bottom: 20px;
         }
 
-        /* Features Section */
+
         .feature-icon {
             font-size: 40px;
             color: #17a2b8;
         }
 
-        /* CTA Section */
+
         .cta {
             background: #17a2b8;
             color: white;
@@ -78,7 +78,6 @@
 </head>
 <body>
 
-<!-- Navbar -->
 <header class="sticky-top">
     <nav class="navbar navbar-expand-lg">
         <div class="container">

@@ -47,6 +47,7 @@
             <input type="password" id="password" name="password" class="form-control" required>
         </div>
         <button type="submit" class="btn btn-secondary w-100">Sign Up</button>
+        <a href="home.jsp" class="text-decoration-none text-white mt-4">Back to home page</a>
     </form>
 </div>
 

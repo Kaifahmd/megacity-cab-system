@@ -16,7 +16,7 @@
             color: white;
         }
 
-        /* Navbar */
+
         .navbar {
             background: #212529;
             padding: 15px 30px;
@@ -48,7 +48,7 @@
             border-color: #17a2b8;
         }
 
-        /* Hero Section */
+
         .hero {
             text-align: center;
             padding: 100px 20px;
@@ -65,7 +65,7 @@
             color: #17a2b8;
         }
 
-        /* Admin Content */
+
         .admin-section {
             padding: 50px 0;
             text-align: center;
@@ -80,7 +80,7 @@
 </head>
 <body>
 
-<!-- Navbar -->
+
 <header class="sticky-top">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
@@ -105,7 +105,7 @@
     </nav>
 </header>
 
-<!-- Hero Section -->
+
 <section class="hero">
     <div class="container name-cus">
         <h1>Hello, <%= session.getAttribute("user") != null ? ((User) session.getAttribute("user")).getName() : "Admin" %>!</h1>
@@ -113,7 +113,7 @@
     </div>
 </section>
 
-<!-- Admin Content -->
+
 <section class="container text-center py-5 text-light">
     <h2 class="mb-4">Why Choose Us?</h2>
     <div class="row">

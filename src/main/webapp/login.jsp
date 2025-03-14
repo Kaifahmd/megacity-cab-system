@@ -27,8 +27,6 @@
 </head>
 <body>
 
-
-<!-- The form submits to the /login servlet using POST -->
 <div class="login-container">
     <h2 class="mb-4 text-black">Login</h2>
     <form action="login" method="POST">
@@ -40,15 +38,15 @@
             <label for="password" class="form-label">Password</label>
             <input type="password" id="password" name="password" class="form-control" required>
         </div>
-        <button type="submit" class="btn btn-secondary w-100">Login</button>
-        <a href="home.jsp">Back to home page</a>
+        <button type="submit" class="btn btn-secondary w-100 nb-4">Login</button>
+        <% if (request.getParameter("error") != null) { %>
+        <p style="color: red;">Error: <%= request.getParameter("error") %></p>
+        <% } %>
+        <a href="home.jsp" class="text-decoration-none text-white mt-4">Back to home page</a>
     </form>
 </div>
 
-<!-- Error handling display -->
-<% if (request.getParameter("error") != null) { %>
-<p style="color: red;">Error: <%= request.getParameter("error") %></p>
-<% } %>
+
 
 </body>
 </html>

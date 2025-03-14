@@ -6,8 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car List</title>
-
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -18,7 +16,6 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Navbar */
         .navbar {
             background: #343a40;
             padding: 15px 30px;
@@ -30,7 +27,7 @@
             color: #17a2b8 !important;
         }
 
-        /* Page Title */
+
         .page-title {
             text-align: center;
             margin: 30px 0;
@@ -38,7 +35,6 @@
             font-weight: bold;
         }
 
-        /* Cards */
         .card-container {
             display: flex;
             flex-wrap: wrap;
@@ -85,7 +81,7 @@
             background: #138496;
         }
 
-        /* Back Button */
+
         .back-btn {
             display: block;
             margin: 20px auto;
@@ -103,7 +99,7 @@
 </head>
 <body>
 
-<!-- Navbar -->
+
 <header class="sticky-top">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
