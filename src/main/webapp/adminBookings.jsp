@@ -81,7 +81,7 @@
 </header>
 <div class="container">
 
-    <!-- Display messages if any -->
+
     <c:if test="${not empty sessionScope.message}">
         <div class="alert alert-success alert-dismissible fade show">
                 ${sessionScope.message}
@@ -98,7 +98,7 @@
         <% session.removeAttribute("error"); %>
     </c:if>
 
-    <!-- Bookings Table -->
+
     <div class="table-responsive">
         <table class="table table-striped table-bordered">
             <thead>

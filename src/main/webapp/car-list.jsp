@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car List - Car Booking</title>
 
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -79,7 +78,6 @@
 </head>
 <body>
 
-<!-- Navbar -->
 <header class="sticky-top">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
@@ -89,7 +87,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
 
-                <!-- Added Buttons -->
                 <div class="d-flex ms-3">
                     <a href="new" class="nav-link me-4">Add Car</a>
                     <a href="${pageContext.request.contextPath}/admin.jsp" class="nav-link">Back</a>
@@ -100,12 +97,8 @@
 </header>
 
 
-<!-- Car List Section -->
 <div class="container">
     <h1>Car List</h1>
-
-
-
     <div class="table-responsive">
         <table class="table table-striped table-bordered">
             <thead>

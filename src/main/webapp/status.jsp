@@ -10,8 +10,8 @@
     <style>
         body {
 
-            background-color: #212529; /* Dark background */
-            color: #e0e0e0; /* Light text */
+            background-color: #212529;
+            color: #e0e0e0;
             margin: 0;
             padding: 0;
         }
@@ -26,37 +26,37 @@
             color: #17a2b8 !important;
         }
         h2, h3 {
-            color: #ffffff; /* White color for headings */
+            color: #ffffff;
             text-align: center;
         }
         table {
             width: 90%;
             margin: 20px auto;
             border-collapse: collapse;
-            background-color: #343a40; /* Dark table background */
+            background-color: #343a40;
         }
         th, td {
-            border: 1px solid #444444; /* Lighter borders */
+            border: 1px solid #444444;
             padding: 12px;
             text-align: left;
-            color: #ffffff; /* White text */
+            color: #ffffff;
         }
         th {
-            background-color: #495057; /* Darker header background */
+            background-color: #495057;
             font-size: 18px;
         }
         td {
-            background-color: #343a40; /* Slightly lighter rows */
+            background-color: #343a40;
         }
         tr:hover {
-            background-color: #495057; /* Row hover effect */
+            background-color: #495057;
         }
         .no-bookings {
             text-align: center;
-            color: #ccc; /* Light grey text for empty states */
+            color: #ccc;
             font-style: italic;
         }
-        /* Button Style */
+
         .btn-custom {
             background-color: #17a2b8;
             color: white;
@@ -71,8 +71,6 @@
         }
 
 
-
-        /* Navbar */
 
     </style>
 </head>
@@ -95,7 +93,7 @@
     </nav>
 </header>
 
-<!-- Pending Bookings Table -->
+
 <h3 style="margin-top: 30px">Pending Bookings</h3>
 <table>
     <tr>
@@ -131,7 +129,6 @@
     %>
 </table>
 
-<!-- Approved Bookings Table -->
 <h3>Approved Bookings</h3>
 <table>
     <tr>
