@@ -17,7 +17,7 @@ public class ConfirmBookingServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        // Retrieve car details from the session and form
+
         Car bookedCar = (Car) request.getSession().getAttribute("bookedCar");
         User loggedInUser = (User) request.getSession().getAttribute("user");
 
@@ -30,19 +30,19 @@ public class ConfirmBookingServlet extends HttpServlet {
 
         int rentalDays = Integer.parseInt(request.getParameter("rentalDays"));
         double totalRental = bookedCar.getRentalAmountForDay() * rentalDays;
-        int userId = loggedInUser.getId(); // Assuming User model has getUserId() method
+        int userId = loggedInUser.getId();
 
-        // Create CarBookingDAO object and insert the booking
+
         CarBookingDAO carBookingDAO = new CarBookingDAO();
         boolean bookingSuccessful = carBookingDAO.addBooking(bookedCar.getCarid(), userId, rentalDays, totalRental);
 
         if (bookingSuccessful) {
-            // Store details for confirmation page
+
             request.setAttribute("bookedCar", bookedCar);
             request.setAttribute("rentalDays", rentalDays);
             request.setAttribute("totalRental", totalRental);
 
-            // Forward to the booking confirmation page
+
             RequestDispatcher dispatcher = request.getRequestDispatcher("/confirmation.jsp");
             dispatcher.forward(request, response);
         } else {

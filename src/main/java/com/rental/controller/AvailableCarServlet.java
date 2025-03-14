@@ -37,12 +37,11 @@ public class AvailableCarServlet extends HttpServlet {
         String pathInfo = request.getPathInfo();
 
         try {
-            // Default action is to list cars
+
             if (pathInfo == null || pathInfo.equals("/")) {
                 listAvailableCar(request, response);
             } else if (pathInfo.equals("/book")) {
-                // Handle direct GET to /book if needed
-                // Or you can leave this out if booking is only via POST
+
             }
         } catch (SQLException ex) {
             throw new ServletException(ex);
@@ -67,13 +66,10 @@ public class AvailableCarServlet extends HttpServlet {
         String carRental = request.getParameter("carRental");
         String carAvailability = request.getParameter("carAvailability");
 
-        // Create a Car object to store the booked car details
         Car car = new Car(carId,carName, carCategory, Integer.parseInt(carSeats), carType, Double.parseDouble(carRental), carAvailability);
 
-        // Store car details in the session
         request.getSession().setAttribute("bookedCar", car);
 
-        // Redirect to bookedcar.jsp to display the booking details
         response.sendRedirect(request.getContextPath() + "/bookedcar.jsp");
     }
 }

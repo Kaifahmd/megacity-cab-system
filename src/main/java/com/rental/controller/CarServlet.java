@@ -37,7 +37,7 @@ public class CarServlet extends HttpServlet {
             throws ServletException, IOException {
         String pathInfo = request.getPathInfo();
         if (pathInfo == null) {
-            pathInfo = "/list";  // Default to listing cars
+            pathInfo = "/list";
         }
         try {
             switch (pathInfo) {
@@ -82,9 +82,9 @@ public class CarServlet extends HttpServlet {
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, ServletException, IOException {
-        int carid = Integer.parseInt(request.getParameter("carid"));  // Get the car ID from URL
-        Car existingCar = carDAO.selectCar(carid);  // Retrieve the car details from the database
-        request.setAttribute("car", existingCar);  // Set the car object in the request scope
+        int carid = Integer.parseInt(request.getParameter("carid"));
+        Car existingCar = carDAO.selectCar(carid);
+        request.setAttribute("car", existingCar);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/car-form.jsp");
         dispatcher.forward(request, response);
     }
@@ -99,7 +99,7 @@ public class CarServlet extends HttpServlet {
         String availability  = request.getParameter("availability");
         Car newCar = new Car(name, category, noSeats, type, rentalAmountForDay, availability);
         carDAO.insertCar(newCar);
-        response.sendRedirect(request.getContextPath() + "/car/list");  // Redirect to the list of cars
+        response.sendRedirect(request.getContextPath() + "/car/list");
     }
 
     private void updateCar(HttpServletRequest request, HttpServletResponse response)
@@ -114,14 +114,14 @@ public class CarServlet extends HttpServlet {
 
         Car updatedCar = new Car(carid, name, category, noSeats, type, rentalAmountForDay, availability);
         carDAO.updateCar(updatedCar);
-        response.sendRedirect(request.getContextPath() + "/car/list");  // Redirect to the list of cars
+        response.sendRedirect(request.getContextPath() + "/car/list");
     }
 
     private void deleteCar(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException {
         int carid = Integer.parseInt(request.getParameter("carid"));
         carDAO.deleteCar(carid);
-        response.sendRedirect(request.getContextPath() + "/car/list");  // Redirect to the list of cars
+        response.sendRedirect(request.getContextPath() + "/car/list");
     }
 }
 
