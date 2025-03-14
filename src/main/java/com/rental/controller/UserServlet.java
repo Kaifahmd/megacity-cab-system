@@ -41,7 +41,7 @@ public class UserServlet extends HttpServlet {
                 return;
             }
 
-            action = pathInfo; // Use the path after /user
+            action = pathInfo;
         }
         try {
             switch (action) {
@@ -76,7 +76,7 @@ public class UserServlet extends HttpServlet {
         String idNo = request.getParameter("idNo");
         String password = request.getParameter("password");
 
-        User newUser = new User(name, email, idNo, password, "customer");  // Default user type as 'customer'
+        User newUser = new User(name, email, idNo, password, "customer");
         userDAO.insertUser(newUser);
 
         response.sendRedirect(request.getContextPath() + "/login.jsp");
@@ -87,15 +87,12 @@ public class UserServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
 
-        // Authenticate the user using the provided credentials
         User user = userDAO.authenticateUser(email, password);
 
-        // If authentication is successful, store the user in session and redirect
         if (user != null) {
-            // Storing the user object in the session
+
             request.getSession().setAttribute("user", user);
 
-            // Redirect based on user type (admin or customer)
             if (user.getUserType().equals("admin")) {
                 response.sendRedirect(request.getContextPath() + "/admin.jsp");
             } else if (user.getUserType().equals("customer")) {
@@ -112,8 +109,8 @@ public class UserServlet extends HttpServlet {
 
     private void logoutUser(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
-        request.getSession().invalidate();  // Invalidates the session
-        response.sendRedirect(request.getContextPath() + "/login.jsp");  // Redirect to the login page after logout
+        request.getSession().invalidate();
+        response.sendRedirect(request.getContextPath() + "/login.jsp");
     }
 
 }

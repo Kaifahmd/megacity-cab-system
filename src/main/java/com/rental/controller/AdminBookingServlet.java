@@ -18,16 +18,12 @@ public class AdminBookingServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-
-
-        // Fetch all bookings
         CarBookingDAO bookingDAO = new CarBookingDAO();
         List<CarBooking> allBookings = bookingDAO.getAllBookings();
 
-        // Set bookings as request attribute
+
         request.setAttribute("bookings", allBookings);
 
-        // Forward to the admin bookings JSP page at the root level
         RequestDispatcher dispatcher = request.getRequestDispatcher("/adminBookings.jsp");
         dispatcher.forward(request, response);
     }
